@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { connect } from 'dva';
-import { Card, Badge, Table, Divider } from 'antd';
-import { ColumnProps } from 'antd/es/table';
-import { match } from 'react-router';
 import DescriptionList from '@/components/DescriptionList';
 import PageHeaderWrapper from '@/components/PageHeaderWrapper';
+import { Badge, Card, Divider, Table } from 'antd';
+import { ColumnProps } from 'antd/es/table';
+import { connect } from 'dva';
+import React, { Component } from 'react';
+import { match } from 'react-router';
 import styles from './BasicProfile.less';
 import { IProfileModelState } from './models/profile';
 
@@ -98,7 +98,7 @@ class BasicProfile extends Component<IBasicProfileProps> {
       }
       return obj;
     };
-    const goodsColumns: ColumnProps<any>[] = [
+    const goodsColumns: Array<ColumnProps<any>> = [
       {
         title: '商品编号',
         dataIndex: 'id',

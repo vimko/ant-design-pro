@@ -1,4 +1,4 @@
-import { queryBasicProfile, queryAdvancedProfile } from '@/services/api';
+import { queryAdvancedProfile, queryBasicProfile } from '@/services/api';
 import { Effect } from 'dva';
 import { Reducer } from 'redux';
 

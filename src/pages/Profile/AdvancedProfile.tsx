@@ -1,25 +1,25 @@
-import React, { Component, Fragment } from 'react';
-import Debounce from 'lodash-decorators/debounce';
-import Bind from 'lodash-decorators/bind';
-import { connect } from 'dva';
-import {
-  Button,
-  Menu,
-  Dropdown,
-  Icon,
-  Row,
-  Col,
-  Steps,
-  Card,
-  Popover,
-  Badge,
-  Table,
-  Tooltip,
-  Divider,
-} from 'antd';
-import classNames from 'classnames';
 import DescriptionList from '@/components/DescriptionList';
 import PageHeaderWrapper from '@/components/PageHeaderWrapper';
+import {
+  Badge,
+  Button,
+  Card,
+  Col,
+  Divider,
+  Dropdown,
+  Icon,
+  Menu,
+  Popover,
+  Row,
+  Steps,
+  Table,
+  Tooltip,
+} from 'antd';
+import classNames from 'classnames';
+import { connect } from 'dva';
+import Bind from 'lodash-decorators/bind';
+import Debounce from 'lodash-decorators/debounce';
+import React, { Component, Fragment } from 'react';
 import styles from './AdvancedProfile.less';
 import { IProfileModelState } from './models/profile';
 
@@ -129,7 +129,7 @@ const popoverContent = (
 
 const customDot = (dot, { status }) =>
   status === 'process' ? (
-    <Popover placement="topLeft" arrowPointAtCenter content={popoverContent}>
+    <Popover placement="topLeft" arrowPointAtCenter={true} content={popoverContent}>
       {dot}
     </Popover>
   ) : (
